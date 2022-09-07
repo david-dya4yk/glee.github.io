@@ -7,11 +7,51 @@
     display: flex;
     margin: 75px 0;
     justify-content: space-between;
+
+    @include _1000{
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 30px;
+    }
+
+    @include _700{
+      display: grid;
+      grid-template-areas:
+      "col1 col1"
+      "col2 col3"
+      "col4 col4";
+      // grid-template-rows: 50px 1fr 30px;
+      grid-template-columns: 50% 1fr;
+    }
   }
 
   &__col {
     max-width: 300px;
     width: 100%;
+    @include _700{
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    &:nth-child(1){
+      grid-area: col1;
+    
+    }
+    &:nth-child(2){
+      grid-area: col2;
+    }
+    &:nth-child(3){
+      grid-area: col3;
+    }
+    &:nth-child(4){
+      grid-area: col4;
+    }
+    @include _700{
+      max-width: 100%;
+    }
   }
 
   &__logo {
@@ -22,6 +62,9 @@
   &__list {
     max-width: 200px;
     width: 100%;
+    @include _700{
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -37,6 +80,9 @@
     max-width: 240px;
     @include line-clamp(2);
     margin-bottom: 15px;
+    @include _700{
+      max-width: 100%;
+    }
   }
 
   &__link:hover {
@@ -93,6 +139,11 @@
     padding: 35px 0;
     display: flex;
     justify-content: space-between;
+    @include _700{
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
   }
 
   &__list--divider {
