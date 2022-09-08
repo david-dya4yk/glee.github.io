@@ -1,8 +1,6 @@
 @import "vars";
 @import "fonts";
 @import "global";
-<<<<<<< Updated upstream
-=======
 @import "header";
 @import "slider";
 @import "./components/product";
@@ -12,10 +10,92 @@
 @import "footer";
 @import "breadcrumbs";
 @import "info";
->>>>>>> Stashed changes
 
-body {
+.header {
+  padding: 50px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    font-size: 36px;
+    color: $blueBayoux;
+  }
+  &__menu {
+    display: flex;
+    justify-content: center;
+  }
+  &__link {
+    color: $blueBayoux;
+    @extend%rubik-500;
+  }
+  &__list:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__options {
+    display: flex;
+  }
+  &__link--plus::after {
+    content: "+";
+    font-size: 16px;
+    margin-left: 3px;
+  }
+}
+.header__icon {
+  width: 50px;
+  height: 50px;
+  fill: #243f4d;
+  fill-rule: evenodd;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  position: relative;
+  text-align: center;
+  span {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    height: 16px;
+    background-color: #fff;
+    font-size: 10px;
+    align-items: center;
+    @extend %dmsans-400;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 3px 6px;
+  }
+  &--search {
+    background-color: $mystic;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  &--heart {
+    background-color: $lightApricol;
+    border-radius: 30px 0 0 30px;
+    width: 90px;
+  }
+  &--cart {
+    background-color: $lightApricol;
+    border-radius: 0 30px 30px 0;
+    width: 90px;
+    position: relative;
+    margin-right: 20px;
+  }
+  &--cart::before {
+    left: 0;
+    position: absolute;
+    height: 32px;
+    width: 1px;
+    background-color: $oasis;
+    content: "";
+  }
+  &--burger {
+    fill: #fff;
+    border-radius: 50%;
+    background-color: $casper;
+  }
 }
 
 @import "media";
