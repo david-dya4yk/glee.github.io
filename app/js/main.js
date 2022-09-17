@@ -1,1 +1,6 @@
-console.log(4);
+$(function () {
+  $(".slider").slick({
+    arrows: false,
+    dots: true,
+  });
+});

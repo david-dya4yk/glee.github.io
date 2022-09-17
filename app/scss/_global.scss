@@ -20,11 +20,8 @@ body {
 
 a {
   text-decoration: none;
-  transition: all 0.2s;
-}
-
-a:hover {
-  color: $lightApricol;
+  transition: color 0.2s ease;
+  color: inherit;
 }
 
 ul {
@@ -37,6 +34,11 @@ ul {
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.container__small {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .visually-hidden {
@@ -69,4 +71,9 @@ p {
 
 img {
   display: block;
+}
+
+input {
+  outline: none;
+  text-overflow: ellipsis;
 }
