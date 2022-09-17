@@ -23,6 +23,7 @@
     "node-sass": "^7.0.1",
     "normalize.css": "^8.0.1",
     "sass": "^1.54.8",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "slick-carousel": "^1.8.1"
   }
 }

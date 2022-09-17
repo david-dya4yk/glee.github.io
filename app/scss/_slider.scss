@@ -1,0 +1,159 @@
+.slider {
+  background-color: $lightApricol;
+
+  &__inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 210px 0px 280px;
+  }
+
+  &__content {
+    max-width: 470px;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 72px;
+    line-height: 1;
+    @extend %rubik-500;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.2;
+    @extend %rubik-400;
+    max-width: 370px;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    padding: 21px 102px 21px 27px;
+    color: $white;
+    background-color: $casper;
+    font-size: 15px;
+    @extend %rubik-500;
+    position: relative;
+
+    &::before {
+      content: "";
+      background-image: url("../images/slider-btn-arrow.svg");
+      position: absolute;
+      width: 25px;
+      height: 10px;
+      background-repeat: no-repeat;
+      transform: translateY(50%);
+      right: 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("../images/circle.png");
+      background-repeat: no-repeat;
+      width: 634px;
+      height: 634px;
+      right: 105px;
+      top: 65px;
+    }
+  }
+  &__sofa {
+    z-index: 1;
+    margin-right: 130px;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 45px;
+
+  li {
+    opacity: 0.3;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  button {
+    font-size: 10px;
+    background-color: $white;
+    border-radius: 50%;
+    border: none;
+    height: 29px;
+    width: 29px;
+    @extend %rubik-500;
+    cursor: pointer;
+  }
+
+  .slick-active {
+    opacity: 1;
+    color: #000;
+  }
+}
+
+.hero {
+  &__inner {
+    display: flex;
+    background-color: $provincialPink;
+  }
+
+  &__item {
+    width: 33.3%;
+    position: relative;
+    padding: 50px 65px 0;
+  }
+
+  &__title::before {
+    content: "";
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    left: -70px;
+    top: 11px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__title--support::before {
+    background-image: url("../images/support.png");
+  }
+
+  &__title--delivery::before {
+    background-image: url("../images/delivery.png");
+    background-position: top;
+  }
+
+  &__title--payment::before {
+    background-image: url("../images/payment.png");
+  }
+
+  &__item:not(:last-child) {
+    border-right: 1px solid $westra;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 2.3;
+    color: $tundora;
+    @extend %dmsans-700;
+    max-width: 205px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__text {
+    line-height: 1.9;
+    @extend %dmsans-400;
+    color: $scorpion;
+    max-width: 205px;
+    margin: 0 auto 60px;
+  }
+}
