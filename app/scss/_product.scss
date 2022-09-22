@@ -1,0 +1,140 @@
+.products {
+  padding-top: 70px;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+    margin-bottom: 185px;
+  }
+
+  &__item {
+    padding: 27px 10px 37px;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    min-height: 380px;
+    max-width: 270px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    position: relative;
+    width: 100%;
+
+    &:hover {
+      .products__content {
+        display: flex;
+      }
+    }
+  }
+
+  &__name {
+    text-align: center;
+    line-height: 2.5;
+
+    span {
+      display: block;
+      line-height: 1;
+      @extend %dmsans-700;
+      color: $casper;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    display: none;
+    top: 35%;
+    max-width: 165px;
+    width: 100%;
+    justify-content: space-between;
+    transition: hover 0.2s ease;
+  }
+
+  &__icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    color: $casper;
+    border: transparent;
+    transition: color 0.2s ease;
+    cursor: pointer;
+    &:hover {
+      color: $white;
+      background-color: $casper;
+    }
+  }
+  &__img {
+    height: 245px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.offers {
+  display: flex;
+  column-gap: 30px;
+
+  &__item {
+    display: flex;
+    background-color: $halfSpanishWhite;
+    position: relative;
+    max-width: 870px;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 80px 0;
+  }
+
+  &__img {
+    max-width: 225px;
+    width: 100%;
+    position: absolute;
+    left: 150px;
+    bottom: 50px;
+  }
+
+  &__title {
+    font-size: 26px;
+    @extend %dmsans-700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    @extend %rubik-400;
+    line-height: 1.9;
+    margin-bottom: 55px;
+  }
+
+  &__content {
+    max-width: 337px;
+    margin-right: 140px;
+  }
+
+  &__link {
+    border: 1px solid $edward;
+    font-size: 15px;
+    padding: 20px 85px 20px 20px;
+    border-radius: 6px;
+    position: relative;
+    color: $blueBayoux;
+    position: relative;
+
+    svg {
+      position: absolute;
+      right: 20px;
+      transform: translateY(50%);
+    }
+  }
+}
