@@ -3,5 +3,11 @@ $(function () {
     arrows: false,
     dots: true,
   });
-  var mixer = mixitup(".products__inner");
+  const controls = {
+    controls: {
+      scope: "local",
+    },
+  };
+  mixitup(".mixitup-1", controls);
+  mixitup(".mixitup-2", controls);
 });
