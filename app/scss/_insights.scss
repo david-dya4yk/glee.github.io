@@ -10,8 +10,13 @@
     color: $mineShaft;
     @extend %dmsans-700;
     line-height: 1;
+
     svg {
       margin-left: 15px;
+    }
+
+    &:hover {
+      color: $lightApricol;
     }
   }
 
