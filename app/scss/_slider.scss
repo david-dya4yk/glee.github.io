@@ -19,10 +19,7 @@
     @extend %rubik-500;
     text-transform: uppercase;
     margin-bottom: 35px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    @include line-clamp(3);
   }
 
   &__text {
@@ -31,10 +28,7 @@
     @extend %rubik-400;
     max-width: 370px;
     margin-bottom: 40px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    @include line-clamp(2);
   }
 
   &__link {
@@ -44,6 +38,7 @@
     font-size: 15px;
     @extend %rubik-500;
     position: relative;
+    transition: all 0.2s ease;
 
     &::before {
       content: "";
@@ -55,10 +50,15 @@
       transform: translateY(50%);
       right: 20px;
     }
+
+    &:hover {
+      background-color: $blueDianne;
+    }
   }
 
   &__item {
     position: relative;
+
     &::before {
       position: absolute;
       content: "";
@@ -70,6 +70,7 @@
       top: 65px;
     }
   }
+
   &__sofa {
     z-index: 1;
     margin-right: 130px;
@@ -83,9 +84,14 @@
 
   li {
     opacity: 0.3;
+    transition: all 0.2s ease;
 
     &:not(:last-child) {
       margin-right: 10px;
+    }
+
+    &:hover {
+      opacity: 1;
     }
   }
 
@@ -102,7 +108,7 @@
 
   .slick-active {
     opacity: 1;
-    color: #000;
+    color: $black;
   }
 }
 
@@ -115,31 +121,28 @@
   &__item {
     width: 33.3%;
     position: relative;
-    padding-top: 50px;
+    padding: 50px 140px 44px 220px;
   }
 
-  &__title::before {
+  &__item::before {
     content: "";
     width: 55px;
     height: 55px;
     position: absolute;
-    left: -70px;
-    top: 11px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    left: 160px;
+    top: 50px;
+    background: no-repeat center/contain;
   }
 
-  &__title--support::before {
+  &__item--support::before {
     background-image: url("../images/support.png");
   }
 
-  &__title--delivery::before {
+  &__item--delivery::before {
     background-image: url("../images/delivery.png");
-    background-position: top;
   }
 
-  &__title--payment::before {
+  &__item--payment::before {
     background-image: url("../images/payment.png");
   }
 
@@ -149,12 +152,12 @@
 
   &__title {
     font-size: 18px;
-    line-height: 2.3;
+    line-height: 1.5;
     color: $tundora;
     @extend %dmsans-700;
     max-width: 205px;
-    margin: 0 auto;
     position: relative;
+    @include line-clamp(1);
   }
 
   &__text {
@@ -162,10 +165,6 @@
     @extend %dmsans-400;
     color: $scorpion;
     max-width: 205px;
-    margin: 0 auto 60px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    @include line-clamp(2);
   }
 }
