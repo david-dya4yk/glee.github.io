@@ -1,0 +1,57 @@
+$blueDianne: #243f4d;
+$blueBayoux: #436372;
+$mystic: #edf1f4;
+$lightApricol: #fcd7b6;
+$oasis: #fde7d3;
+$casper: #a3bbc8;
+$boulder: #7d7d7d;
+$portGore: #1f2044;
+$provincialPink: #fef7f0;
+$cello: #234969;
+$tundora: #414141;
+$scorpion: #585858;
+$westra: #e8e4df;
+$white: #ffffff;
+$black: #000000;
+$codGray: #191919;
+$gray: #8b8b8b;
+$halfSpanishWhite: #feefe2;
+$edward: #b3b7b5;
+$alabaster: #f8f8f8;
+$mineShaft: #262626;
+$alto: #e0e0e0;
+$ebonyClay: #222933;
+$mystic: #dae4e9;
+$manatee: #979ba0;
+
+%dmsans-400 {
+  font-family: "DMSans", sans-serif;
+  font-weight: 400;
+}
+
+%dmsans-500 {
+  font-family: "DMSans", sans-serif;
+  font-weight: 500;
+}
+
+%dmsans-700 {
+  font-family: "DMSans", sans-serif;
+  font-weight: 700;
+}
+
+%rubik-400 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+%rubik-500 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+@mixin line-clamp($count) {
+  display: -webkit-box;
+  -webkit-line-clamp: $count;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -1,0 +1,36 @@
+.breadcrumbs {
+  background-color: $mystic;
+  padding: 30px 0;
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    color: $ebonyClay;
+    @extend %rubik-400;
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    font-size: 14px;
+    color: $manatee;
+    @extend %rubik-400;
+    position: relative;
+    a:hover {
+      color: $lightApricol;
+    }
+  }
+  &__item:not(:last-child) {
+    padding-right: 20px;
+    &::before {
+      position: absolute;
+      content: "/";
+      right: 7px;
+      top: 0;
+    }
+  }
+}
