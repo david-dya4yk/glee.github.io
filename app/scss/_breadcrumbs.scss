@@ -8,6 +8,7 @@
     color: $ebonyClay;
     @extend %rubik-400;
     margin-bottom: 15px;
+    @include line-clamp(1);
   }
 
   &__list {
@@ -20,6 +21,8 @@
     color: $manatee;
     @extend %rubik-400;
     position: relative;
+    @include line-clamp(1);
+
     a:hover {
       color: $lightApricol;
     }

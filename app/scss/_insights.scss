@@ -28,6 +28,15 @@
     z-index: 2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    @include _1200{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    @include _700{
+      grid-template-columns: 1fr;
+    }
   }
 
   &__bottom {
@@ -40,10 +49,26 @@
   &__partners {
     display: flex;
     justify-content: space-around;
+    @include _900{
+      flex-wrap: wrap;
+      gap: 30px;
+    }
   }
+
 
   &__logo {
     display: flex;
     align-items: center;
+    justify-content: center;
+    max-width: 170px;
+    width: 100%;
+  }
+
+  &__bottom--small {
+    background-color: $provincialPink;
+    .insights__bottom {
+      padding: 80px 0;
+      margin-top: 0;
+    }
   }
 }
