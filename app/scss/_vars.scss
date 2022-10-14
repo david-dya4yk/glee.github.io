@@ -23,6 +23,7 @@ $alto: #e0e0e0;
 $ebonyClay: #222933;
 $mystic: #dae4e9;
 $manatee: #979ba0;
+$wilSand: #f6f6f6;
 
 %dmsans-400 {
   font-family: "DMSans", sans-serif;
@@ -54,4 +55,58 @@ $manatee: #979ba0;
   -webkit-line-clamp: $count;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+@mixin _320 {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin _432 {
+  @media (max-width: 432px) {
+    @content;
+  }
+}
+
+@mixin _600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin _700 {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin _900 {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin _1000 {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin _1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin _1450 {
+  @media (max-width: 1450px) {
+    @content;
+  }
+}
+
+@mixin _1800 {
+  @media (max-width: 1800px) {
+    @content;
+  }
 }

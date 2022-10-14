@@ -1,0 +1,140 @@
+.house {
+  padding: 120px 0;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__img {
+    max-width: 570px;
+    max-height: 675px;
+  }
+
+  &__content {
+    padding: 80px 30px;
+    margin-bottom: 120px;
+  }
+
+  &__subtitle {
+    max-width: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 175px;
+    @extend %rubik-400;
+    line-height: 2;
+    position: relative;
+    margin-bottom: 50px;
+    span {
+      @include line-clamp(1);
+    }
+
+    &::after {
+      position: absolute;
+      content: "12";
+      top: -100px;
+      left: 0;
+      font-size: 140px;
+      @extend %rubik-700;
+      color: $casper;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    color: $blueDianne;
+    @extend %dmsans-700;
+    margin-bottom: 50px;
+    @include line-clamp(1);
+  }
+
+  &__text {
+    @extend %rubik-400;
+    line-height: 1.9;
+    margin-bottom: 58px;
+  }
+
+  &__border {
+    height: 2px;
+    background-color: $manatee;
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding: 0 25px 0 90px;
+    font-size: 36px;
+    @extend %dmsans-700;
+    position: relative;
+    @include line-clamp(1);
+    max-width: 200px;
+    width: 100%;
+
+    span {
+      display: block;
+      color: $tundora;
+      font-size: 16px;
+      @include line-clamp(1);
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid $manatee;
+    }
+    &::before {
+      position: absolute;
+      background: no-repeat url("../images/icons/notebook.svg");
+      left: 30px;
+      top: 10px;
+      content: "";
+      width: 37px;
+      height: 38px;
+    }
+  }
+
+  &__item--gramophone::before {
+    background: no-repeat url("../images/icons/gramaphone.svg");
+    width: 44px;
+    grid-template: 40px;
+  }
+
+  &__item--medal::before {
+    background: no-repeat url("../images/icons/medal.svg");
+    width: 42px;
+    height: 41px;
+  }
+}
+
+.services {
+  padding: 80px 0;
+  background-color: $lightApricol;
+  @extend %dmsans-700;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 270px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__subtitle {
+    @include line-clamp(1);
+    padding: 15px 0;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 1.8;
+    @include line-clamp(1);
+  }
+}

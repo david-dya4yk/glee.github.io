@@ -38,7 +38,7 @@ ul {
 
 .container--small {
   max-width: 1230px;
-  padding: 0 30px;
+  padding: 0 15px;
 }
 
 .visually-hidden {
@@ -72,6 +72,7 @@ img {
 input {
   outline: none;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 .title {
@@ -80,15 +81,34 @@ input {
   color: $codGray;
   text-align: center;
   margin-bottom: 30px;
+
+  @include _600 {
+    font-size: 26px;
+  }
+
+  @include _432 {
+    margin-bottom: 15px;
+  }
 }
 .controls {
   display: flex;
   justify-content: center;
   margin-bottom: 80px;
 
+  @include _432 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 30px;
+  }
   &__option {
     &:not(:last-child) {
       margin-right: 30px;
+      @include _600 {
+        margin-right: 10px;
+      }
+      @include _432 {
+        margin-bottom: 10px;
+      }
     }
   }
 
