@@ -1,9 +1,10 @@
 .house {
-  padding: 120px 0;
+  padding-top: 120px;
 
   &__inner {
     display: flex;
     column-gap: 50px;
+    margin-bottom: 120px;
   }
 
   &__img {
@@ -76,6 +77,7 @@
       border: none;
     }
   }
+  
   &__info {
     span {
       display: block;
@@ -89,6 +91,7 @@
     align-items: center;
   }
 }
+
 .services {
   padding: 80px 0;
   background-color: $lightApricol;
@@ -119,3 +122,105 @@
     font-size: 18px;
   }
 }
+
+.team {
+  padding: 120px 0;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__info {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  &__title {
+    text-align: left;
+    @include line-clamp(1);
+  }
+
+  &__text {
+    max-width: 300px;
+    @extend %rubik-400;
+    line-height: 1.9;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    color: $white;
+    background-color: $casper;
+    max-width: 170px;
+    padding: 15px 20px;
+    font-size: 15px;
+    @extend %dmsans-700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include line-clamp(1);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+
+  &__img {
+    max-width: 370px;
+    max-height: 320px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__item{
+    position: relative;
+    padding-bottom: 60px;
+  }
+
+  &__box {
+    max-width: 325px;
+    width: 100%;
+    padding: 30px 25px 25px 25px;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__name {
+    font-size: 22px;
+    @extend %dmsans-700;
+    color: $blueBayoux;
+    @include line-clamp(2);
+
+    span {
+      @extend %rubik-400;
+      padding-top: 15px;
+      color: #000;
+      display: block;
+      font-size: 16px;
+      @include line-clamp(1);
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 7px;
+  }
+
+  &__social {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $wilSand;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
