@@ -1,5 +1,4 @@
 @import "vars";
-@import "fonts";
 @import "global";
 @import "header";
 @import "slider";
@@ -8,8 +7,8 @@
 @import "design";
 @import "insights";
 @import "footer";
-@import "breadcrumbs";
+@import "./components/breadcrumbs";
 @import "info";
 @import "login";
+@import "about";
 
-@import "media";

@@ -23,20 +23,21 @@ $alto: #e0e0e0;
 $ebonyClay: #222933;
 $mystic: #dae4e9;
 $manatee: #979ba0;
+$tundora: #4c4c4c;
 $wilSand: #f6f6f6;
 
 %dmsans-400 {
-  font-family: "DMSans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 400;
 }
 
 %dmsans-500 {
-  font-family: "DMSans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 500;
 }
 
 %dmsans-700 {
-  font-family: "DMSans", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 700;
 }
 
@@ -48,6 +49,11 @@ $wilSand: #f6f6f6;
 %rubik-500 {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
 }
 
 @mixin line-clamp($count) {
