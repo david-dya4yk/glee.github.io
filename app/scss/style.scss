@@ -1,12 +1,12 @@
 @import "vars";
 @import "global";
-@import "header";
+@import "./components/header";
 @import "slider";
 @import "./components/product";
 @import "products";
-@import "design";
-@import "insights";
-@import "footer";
+@import "./components/design";
+@import "./components/insights";
+@import "./components/footer";
 @import "./components/breadcrumbs";
 @import "info";
 @import "login";
