@@ -1,0 +1,121 @@
+.house {
+  padding: 120px 0;
+
+  &__inner {
+    display: flex;
+    column-gap: 50px;
+  }
+
+  &__img {
+    max-width: 570px;
+    max-height: 675px;
+  }
+
+  &__content {
+    max-width: 550px;
+    padding: 80px 0;
+  }
+
+  &__subtitle {
+    display: flex;
+    line-height: 1.9;
+    margin-bottom: 50px;
+  }
+
+  &__date {
+    @extend %rubik-400;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__years {
+    @extend %rubik-700;
+    font-size: 140px;
+    line-height: 0.5;
+    color: $casper;
+    margin-right: 25px;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    @extend %rubik-400;
+    line-height: 1.9;
+    margin-bottom: 55px;
+  }
+
+  &__border {
+    background-color: $mystic;
+    height: 2px;
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    border-right: 1px solid $mystic;
+    max-width: 200px;
+    padding: 10px 25px 15px 0;
+    @extend %dmsans-700;
+    font-size: 36px;
+    &:nth-child(2) {
+      padding: 10px 25px 15px 25px;
+    }
+    &:nth-child(3) {
+      padding: 10px 0 15px 25px;
+      border: none;
+    }
+  }
+  &__info {
+    span {
+      display: block;
+      font-size: 16px;
+      color: $tundora;
+    }
+  }
+  &__icons {
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+  }
+}
+.services {
+  padding: 80px 0;
+  background-color: $lightApricol;
+
+ 
+  &__list{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item{
+    max-width: 270px;
+    width: 100%;
+    @extend %dmsans-700;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+  }
+
+  &__subtitle{
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  &__title{
+    font-size: 18px;
+  }
+}
