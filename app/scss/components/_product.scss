@@ -21,6 +21,10 @@
     box-shadow: unset;
     justify-content: unset;
     text-align: left;
+    transition: box-shadow 0.2s ease;
+    &:hover {
+      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    }
 
     .product__img {
       height: 500px;
@@ -100,7 +104,7 @@
     cursor: pointer;
     transition: color 0.2s ease;
     &:hover {
-      color: $casper;
+      color: $white;
       background-color: $lightApricol;
     }
   }
@@ -157,9 +161,8 @@
     align-items: center;
     width: 100%;
     justify-content: center;
- 
   }
-  &__inner{
+  &__inner {
     max-width: 100%;
     max-height: 350px;
     width: 100%;
