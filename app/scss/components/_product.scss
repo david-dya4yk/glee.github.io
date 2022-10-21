@@ -11,12 +11,101 @@
   position: relative;
   width: 100%;
 
+  &__rateyo {
+    display: none;
+  }
+
+  &.product--list {
+    padding: 0;
+    flex-direction: unset;
+    box-shadow: unset;
+    justify-content: unset;
+    text-align: left;
+    transition: box-shadow 0.2s ease;
+    &:hover {
+      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    }
+
+    .product__img {
+      height: 500px;
+      max-width: 370px;
+      border: 1px solid $concrete;
+      margin-right: 60px;
+      padding: 0 20px;
+      img {
+        max-height: 350px;
+      }
+    }
+
+    .product__content {
+      display: none;
+    }
+
+    .product__rateyo {
+      display: unset;
+    }
+
+    .product__name {
+      font-size: 40px;
+      text-align: left;
+    }
+
+    .product__subtitle {
+      color: $mineShaft;
+      font-size: 30px;
+      margin-bottom: 35px;
+    }
+
+    .product__box {
+      text-align: left;
+    }
+
+    .product__text {
+      display: unset;
+      @include line-clamp(3);
+    }
+
+    .product__link {
+      display: block;
+      @include line-clamp(1);
+    }
+  }
+
   @include _600 {
     min-height: 350px;
   }
+
   &:hover {
     .product__content {
       opacity: 1;
+    }
+  }
+
+  &__box {
+    text-align: center;
+  }
+
+  &__text {
+    display: none;
+    max-width: 415px;
+    margin-bottom: 30px;
+    line-height: 2;
+  }
+  &__link {
+    padding: 20px 50px;
+    color: $white;
+    background-color: $casper;
+    border-radius: 6px;
+    text-transform: uppercase;
+    max-width: 208px;
+    margin-top: 35px;
+    @extend %rubik-400;
+    display: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    &:hover {
+      color: $white;
+      background-color: $lightApricol;
     }
   }
 
@@ -34,6 +123,7 @@
     line-height: 1;
     @extend %dmsans-700;
     color: $casper;
+    @include line-clamp(1);
   }
 
   &__content {
@@ -71,10 +161,16 @@
     align-items: center;
     width: 100%;
     justify-content: center;
-
+  }
+  &__inner {
+    max-width: 100%;
+    max-height: 350px;
+    width: 100%;
+    height: 100%;
     img {
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 }
@@ -92,7 +188,7 @@
   &__img {
     min-height: 250px;
     @include _1200 {
-    width: 100%;
+      width: 100%;
     }
   }
 
@@ -126,7 +222,7 @@
     margin-right: 25px;
     @include _1200 {
       max-width: 100%;
-      }
+    }
     &:hover {
       color: $blueBayoux;
     }

@@ -1,0 +1,171 @@
+@@include('./components/header.html')
+<main class="main">
+  @@include('./components/breadcrumbs.html',{name: 'Product list 1'})
+  <section class="shop">
+    <h2 class="visually-hidden">dfsdf</h2>
+    <div class="container container--small">
+      <div class="shop__wrapper">
+        <aside class="aside">
+          <div class="filters">
+            <h3 class="aside__title">category</h3>
+            <form class="filters__form" action="#">
+              <ul class="filters__list">
+                @@loop('./components/filters.html',[ {"name": "Chair"}, {"name":
+                "Table"}, {"name": "Lamp"}, {"name": "Watch"}, {"name":
+                "Clock"}, ])
+              </ul>
+            </form>
+          </div>
+          <div class="price">
+            <h3 class="aside__title">price</h3>
+            <div class="price__range">
+              <input class="price__slider" type="text" />
+            </div>
+            <span class="irs-from" style="left: 0"></span>
+          </div>
+          <div class="filters">
+            <h3 class="aside__title">category</h3>
+            <form class="filters__form" action="#">
+              <ul class="filters__list">
+                @@loop('./components/filters.html',[ {"name": "RFL", "count":
+                "10"}, {"name": "Brothers", "count": "21"}, {"name": "Regal",
+                "count": "3"}, {"name": "Nadia", "count": "14"}, {"name":
+                "Otobi", "count": "6"}, ])
+              </ul>
+            </form>
+          </div>
+          <div class="recent">
+            <h3 class="aside__title">recent product</h3>
+            <ul class="resent__list">
+              <li class="resent__item">
+                <a class="recent__link" href="#">
+                  <div class="resent__inner">
+                    <div class="resent__images">
+                      <img
+                        src="images/products/resent/1.png"
+                        alt="lamp triangle"
+                      />
+                    </div>
+                    <div class="resent__content">
+                      <h4 class="resent__title">Pendant lamp</h4>
+                      <div class="rateyo"></div>
+                      <div class="resent__prise">23$</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="resent__item">
+                <a class="recent__link" href="#">
+                  <div class="resent__inner">
+                    <div class="resent__images">
+                      <img
+                        src="images/products/resent/2.png"
+                        alt="a lamp for a bedside table"
+                      />
+                    </div>
+                    <div class="resent__content">
+                      <h4 class="resent__title">Pendant lamp</h4>
+                      <div class="rateyo"></div>
+                      <div class="resent__prise">23$</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="resent__item">
+                <a class="recent__link" href="#">
+                  <div class="resent__inner">
+                    <div class="resent__images">
+                      <img
+                        src="images/products/resent/3.png"
+                        alt="lamp on legs"
+                      />
+                    </div>
+                    <div class="resent__content">
+                      <h4 class="resent__title">Pendant lamp</h4>
+                      <div class="rateyo"></div>
+                      <div class="resent__prise">23$</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <div class="shop__content">
+          <div class="shop__filters">
+            <button class="shop__btn shop__btn--active button__grid"></button>
+            <button class="shop__btn button__list"></button>
+          </div>
+          <ul class="shop__inner">
+            <li class="shop__item">
+              @@include('./components/product.html', {name: "Wooden chair",
+              image: "images/products/item1.png", price: "$29.00"})
+            </li>
+            <li class="shop__item">
+              @@include('./components/product.html', {name: "Wooden chair",
+              image: "images/products/item2.png", price: "$29.00"})
+            </li>
+            <li class="shop__item">
+              @@include('./components/product.html', {name: "Wooden chair",
+              image: "images/products/item3.png", price: "$29.00"})
+            </li>
+            <li class="shop__item">
+              @@include('./components/product.html', {name: "Wooden chair",
+              image: "images/products/item4.png", price: "$29.00"})
+            </li>
+            <li class="shop__item">
+              @@include('./components/product.html', {name: "Wooden chair",
+              image: "images/products/item5.png", price: "$29.00"})
+            </li>
+            <li class="shop__item">
+              @@include('./components/product.html', {name: "Wooden chair",
+              image: "images/products/item6.png", price: "$29.00"})
+            </li>
+            <li class="shop__item">
+              @@include('./components/product.html', {name: "Wooden chair",
+              image: "images/products/item7.png", price: "$29.00"})
+            </li>
+            <li class="shop__item">
+              @@include('./components/product.html', {name: "Wooden chair",
+              image: "images/products/item8.png", price: "$29.00"})
+            </li>
+            <li class="shop__item">
+              @@include('./components/product.html', {name: "Wooden chair",
+              image: "images/products/item1.png", price: "$29.00"})
+            </li>
+            <li class="shop__item">
+              @@include('./components/product.html', {name: "Wooden chair",
+              image: "images/products/item2.png", price: "$29.00"})
+            </li>
+            <li class="shop__item">
+              @@include('./components/product.html', {name: "Wooden chair",
+              image: "images/products/item3.png", price: "$29.00"})
+            </li>
+            <li class="shop__item">
+              @@include('./components/product.html', {name: "Wooden chair",
+              image: "images/products/item4.png", price: "$29.00"})
+            </li>
+          </ul>
+          <div class="pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <span class="pagination__link">1</span>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">3</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">Next</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  @@include('./components/insights__bottom.html')
+</main>
+@@include('./components/footer.html')
