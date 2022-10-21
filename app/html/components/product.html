@@ -1,7 +1,10 @@
 <article class="product">
   <a class="product__img" href="#">
-    <img src="@@image" alt="@@name" />
+    <div class="product__inner">
+      <img src="@@image" alt="@@name" />
+    </div>
   </a>
+
   <div class="product__content">
     <button class="product__icon">
       <svg width="20px" height="20px">
@@ -30,8 +33,16 @@
       </svg>
     </button>
   </div>
-  <h3 class="product__name">
-    <a href="#">@@name</a>
-  </h3>
-  <span class="product__subtitle">@@price</span>
+  <div class="product__box">
+    <h3 class="product__name">
+      <a href="#">@@name</a>
+    </h3>
+    <div class="product__rateyo rateyo"></div>
+    <span class="product__subtitle">@@price</span>
+    <div class="product__text">
+      consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+    </div>
+    <a class="product__link" href="#">add to cart</a>
+  </div>
 </article>

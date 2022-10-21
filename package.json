@@ -15,7 +15,9 @@
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^7.1.0",
-    "gulp-sass": "^5.1.0"
+    "gulp-sass": "^5.1.0",
+    "ion-rangeslider": "^2.3.1",
+    "rateyo": "^2.3.5"
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",

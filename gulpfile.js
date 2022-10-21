@@ -23,6 +23,8 @@ function styles() {
     "node_modules/normalize.css/normalize.css",
     "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css",
     "node_modules/slick-carousel/slick/slick.css",
+    "node_modules/rateyo/src/jquery.rateyo.css",
+    "node_modules/ion-rangeslider/css/ion.rangeSlider.min.css",
     "app/scss/style.scss",
   ])
     .pipe(scss({ outputStyle: "compressed" }))
@@ -54,6 +56,8 @@ function scripts() {
     "node_modules/slick-carousel/slick/slick.min.js",
     "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
     "node_modules/mixitup/dist/mixitup.min.js",
+    "node_modules/rateyo/src/jquery.rateyo.js",
+    "node_modules/ion-rangeslider/js/ion.rangeSlider.min.js",
     "app/js/main.js",
   ])
     .pipe(concat("main.min.js"))
