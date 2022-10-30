@@ -402,3 +402,71 @@
     }
   }
 }
+
+
+.interior{
+  &__img{
+    width: 830px;
+    height: 500px;
+    margin-bottom: 40px;
+    position: relative;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+  }
+
+  &__box{
+    position: absolute;
+    transform: translateY(-114px);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    max-width: 275px;
+    width: 100%;
+    padding: 30px;
+    background-color: $casper;
+    color: $white;
+    font-size: 12px;
+    @extend %rubik-400;
+  }
+
+  &__title{
+    margin-bottom: 30px;
+    font-size: 36px;
+    @extend %rubik-400;
+    color: $mineShaft;
+  }
+
+  &__text{
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  &__link{
+    padding: 20px;
+    border: 1px solid $casper;
+    max-width: 180px;
+    width: 100%;
+    position: relative;
+    color: $casper;
+    display: inline-block;
+    transition: border 0.2s ease;
+    &::before{
+        position: absolute;
+        content: "";
+        background: no-repeat url('../images/icons/arrows-slider.svg');
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 11px;
+    }
+
+    &:hover{
+      border-color: $lightApricol;
+    }
+  }
+}
