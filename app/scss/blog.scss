@@ -1,0 +1,119 @@
+.blog {
+  padding: 120px 0;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__list {
+    max-width: 830px;
+    width: 100%;
+    margin-right: 70px;
+  }
+
+  .pagination__list {
+    justify-content: start;
+  }
+  &__item {
+    width: 830px;
+    margin-bottom: 50px;
+  }
+
+  .aside {
+    margin-right: 0;
+  }
+}
+
+.search {
+  margin-bottom: 60px;
+
+  &__form {
+    height: 43px;
+    display: flex;
+    position: relative;
+  }
+
+  &__input {
+    height: 100%;
+    border: 1px solid $mystic;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 20px;
+    &:focus {
+      border-color: $casper;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    height: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    border: none;
+    background-color: $mystic;
+    border-radius: 4px;
+    margin-left: -10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    &:hover {
+      background-color: $casper;
+      fill: $white;
+    }
+  }
+}
+
+.posts {
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.post {
+  display: flex;
+  justify-content: space-between;
+
+  &__img {
+    display: block;
+    max-width: 70px;
+    width: 100%;
+    height: 70px;
+    margin-right: 20px;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      transition: transform 0.2s ease;
+      width: 100%;
+      height: 100%;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+  &__content {
+    width: 100%;
+  }
+  &__title {
+    font-size: 14px;
+    color: $mineShaft;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    transition: text-decoration 0.2s ease;
+    @include line-clamp(2);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__date {
+    font-size: 12px;
+    color: $dustyGray;
+    line-height: 1;
+    svg {
+      transform: translateY(3px);
+    }
+  }
+}

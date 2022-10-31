@@ -7,7 +7,6 @@ $('.related__inner').slick({
   appendArrows: $('.related__arrows'),
   prevArrow: '<button type="button" class="related__prev">Previous</button>',
   nextArrow: '<button type="button" class="related__next">Next</button>',
-  
 });
 
 
