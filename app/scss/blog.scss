@@ -18,20 +18,19 @@
     width: 830px;
     margin-bottom: 50px;
   }
+
+  .aside {
+    margin-right: 0;
+  }
 }
 
 .search {
   margin-bottom: 60px;
 
   &__form {
-    width: 100%;
     height: 43px;
     display: flex;
-    .search__input,
-    .search__btn:hover {
-        font-size: 0;
-      //TODO
-    }
+    position: relative;
   }
 
   &__input {
@@ -40,52 +39,73 @@
     border-radius: 5px;
     width: 100%;
     padding: 10px 20px;
+    &:focus {
+      border-color: $casper;
+    }
   }
 
   &__btn {
-    height: 100%;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    height: 96%;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 48px;
     border: none;
     background-color: $mystic;
-    border-radius: 5px;
+    border-radius: 4px;
     margin-left: -10px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+    &:hover {
+      background-color: $casper;
+      fill: $white;
+    }
   }
 }
 
 .posts {
-  &__link {
-    display: flex;
-    justify-content: space-between;
-    transition: box-shadow 0.2s ease;
-    &:hover {
-        box-shadow: 13px 10px 23px -9px rgba(0,0,0,0.75);
-    }
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
   }
+}
+.post {
+  display: flex;
+  justify-content: space-between;
 
   &__img {
+    display: block;
     max-width: 70px;
-    max-height: 70px;
+    width: 100%;
+    height: 70px;
+    margin-right: 20px;
+    overflow: hidden;
     img {
+      object-fit: cover;
+      transition: transform 0.2s ease;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+    }
+    &:hover img {
+      transform: scale(1.1);
     }
   }
-
   &__content {
     width: 100%;
-    padding-left: 20px;
   }
-
   &__title {
     font-size: 14px;
     color: $mineShaft;
     line-height: 1.4;
     margin-bottom: 10px;
+    transition: text-decoration 0.2s ease;
+    @include line-clamp(2);
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__date {
@@ -95,9 +115,5 @@
     svg {
       transform: translateY(3px);
     }
-  }
-
-  &__item:not(:last-child) {
-    margin-bottom: 20px;
   }
 }
