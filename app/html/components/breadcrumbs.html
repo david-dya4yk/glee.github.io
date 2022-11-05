@@ -2,12 +2,8 @@
   <div class="container">
     <h2 class="breadcrumbs__title">@@name</h2>
     <ul class="breadcrumbs__list">
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="#">Home</a>
-      </li>
-      <li class="breadcrumbs__item">
-        <span class="breadcrumbs__link">@@name</span>
-      </li>
+      @@for (var i = 0; i < context.items.length; i++) {
+ @@include('./breadcrumb.html',`+(JSON.stringify(context.items[i]))+` )}
     </ul>
   </div>
 </section>
