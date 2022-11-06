@@ -11,7 +11,9 @@
               <img src="images/inights/item-1.jpg" alt="black living room" />
             </a>
             <div class="interior__box">
-              <time class="interior__date">28 JANUARY, 2020</time>
+              <time class="interior__date" datetime="2020-06-28"
+                >28 JANUARY, 2020</time
+              >
               <div class="interior__user">by admin</div>
             </div>
           </div>
@@ -39,10 +41,7 @@
           </blockquote>
           <a class="test" href="#">
             <div class="left">
-            <img
-              src="images/inights/item-4.jpg"
-              alt="living room"
-            />
+              <img src="images/inights/item-4.jpg" alt="living room" />
             </div>
             <div>
               <h5>Riusmod tempor incididunt</h5>
@@ -70,13 +69,18 @@
               </div>
             </div>
             <div class="blog__info">
-              <div class="blog__tags">Tags:<span>All, Trending</span></div>
+              <ul class="blog__tags">
+                Tags:
+                <li class="blog__tag"><a href="#">All</a>,</li>
+                <li class="blog__tag"><a href="#">Trending</a></li>
+              </ul>
               <div class="blog__share">
                 Share:
                 <ul class="blog__socials">
                   <li class="blog__icon">
-                    <a href="#"
-                      ><svg
+                    <a href="#">
+                      <span class="visually-hidden">instagram</span>
+                      <svg
                         width="17.19"
                         height="17.19"
                         viewBox="0 0 17.19 17.19"
@@ -90,8 +94,9 @@
                     </a>
                   </li>
                   <li class="blog__icon">
-                    <a href="#"
-                      ><svg
+                    <a href="#">
+                      <span class="visually-hidden">instagram</span>
+                      <svg
                         width="17.19"
                         height="17.19"
                         viewBox="0 0 17.19 17.19"
@@ -105,8 +110,9 @@
                     </a>
                   </li>
                   <li class="blog__icon">
-                    <a href="#"
-                      ><svg
+                    <a href="#">
+                      <span class="visually-hidden">instagram</span>
+                      <svg
                         width="17.19"
                         height="17.19"
                         viewBox="0 0 17.19 17.19"
@@ -120,8 +126,9 @@
                     </a>
                   </li>
                   <li class="blog__icon">
-                    <a href="#"
-                      ><svg
+                    <a href="#">
+                      <span class="visually-hidden">instagram</span>
+                      <svg
                         width="17.19"
                         height="17.19"
                         viewBox="0 0 17.19 17.19"
@@ -142,8 +149,11 @@
         <aside class="aside">
           <div class="search">
             <form class="search__form" action="#">
-              <input class="search__input" type="text" />
+              <label class="search__label">
+                <input class="search__input" type="text" />
+              </label>
               <button class="search__btn" type="submit">
+                <span class="visually-hidden">search field</span>
                 <svg width="15.28" height="15.281" viewBox="0 0 15.28 15.281">
                   <path
                     fill="curentColor"
@@ -164,31 +174,6 @@
               </ul>
             </form>
           </div>
-          <div class="posts">
-            <h3 class="aside__title">Recent Posts</h3>
-            <ul class="posts__inner">
-              <li class="posts__item">
-                @@include('./components/posts-aside.html', { 
-                  href: "#", 
-                  src: "images/inights/small/1.jpg", text: " Corem ipsum dolor tetur adipisicing elit"})
-              </li>
-              <li class="posts__item">
-                @@include('./components/posts-aside.html', { 
-                  href: "#", 
-                  src: "images/inights/small/2.jpg", text: " Corem ipsum dolor tetur adipisicing elit"})
-              </li>
-              <li class="posts__item">
-                @@include('./components/posts-aside.html', { 
-                  href: "#", 
-                  src: "images/inights/small/3.jpg", text: " Corem ipsum dolor tetur adipisicing elit"})
-              </li>
-              <li class="posts__item">
-                @@include('./components/posts-aside.html', { 
-                  href: "#", 
-                  src: "images/inights/small/4.jpg", text: " Corem ipsum dolor tetur adipisicing elit"})
-              </li>
-            </ul>
-          </div>
         </aside>
       </div>
     </div>
@@ -196,110 +181,124 @@
   <section class="comment">
     <div class="container container--small">
       <div class="comment__inner">
-      <h2 class="comment__title">3 Comments</h2>
-      <ul class="comment__list">
-        <li class="comment__item">
-          <div class="comment__img">
-            <img src="images/team/1.jpg" alt="girls" />
-          </div>
-          <div class="comment__content">
-            <div class="comment__top">
-              <div class="comment__name">Delores G. Roberts</div>
-              <time class="comment__date">Add 11 Oct 2020</time>
+        <h2 class="comment__title">3 Comments</h2>
+
+        <ul class="comment__list">
+          <li class="comment__item">
+            <div class="comment__img">
+              <img src="images/team/1.jpg" alt="girls" />
             </div>
-            <div class="comment__text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas fringilla massa et tristique convallis. Class aptent
-                taciti sociosqu ad litora torquent per conubia nostra, per
-                inceptos himenaeos. Suspendisse orci sem, ultrices
-              </p>
-            </div>
-            <div class="comment__link">
-              Reply
-          
-              <svg width="5.188" height="9.531" viewBox="0 0 5.188 9.531">
-                <path
-                  fill="currentColor"
-                  d="M617.472,457.538a0.463,0.463,0,0,0,.331-0.14l4.221-4.265,0.013-.013a0.522,0.522,0,0,0,.095-0.144h0a0.541,0.541,0,0,0,.045-0.217v0a0.528,0.528,0,0,0-.044-0.211h0a0.525,0.525,0,0,0-.1-0.147,0.043,0.043,0,0,0-.011-0.012l-4.221-4.265a0.461,0.461,0,0,0-.68.019,0.539,0.539,0,0,0,.018.724l3.857,3.9-3.857,3.9a0.539,0.539,0,0,0-.018.724A0.467,0.467,0,0,0,617.472,457.538Z"
-                  transform="translate(-617 -448)"
-                />
-              </svg>
-            </div>
-            <div class="comment__reply">
-              <div class="comment__img">
-                <img src="images/team/2.jpg" alt="dad" />
+            <div class="comment__content">
+              <div class="comment__top">
+                <div class="comment__name">Delores G. Roberts</div>
+                <time class="comment__date" datetime="2020-10-11"
+                  >Add 11 Oct 2020</time
+                >
               </div>
-              <div class="comment__content">
-                <div class="comment__top">
-                  <div class="comment__name">Delores G. Roberts</div>
-                  <time class="comment__date">Add 11 Oct 2020</time>
+              <div class="comment__text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Maecenas fringilla massa et tristique convallis. Class aptent
+                  taciti sociosqu ad litora torquent per conubia nostra, per
+                  inceptos himenaeos. Suspendisse orci sem, ultrices
+                </p>
+              </div>
+              <a class="comment__link" href="#">
+                Reply
+                <svg width="5.188" height="9.531" viewBox="0 0 5.188 9.531">
+                  <path
+                    fill="currentColor"
+                    d="M617.472,457.538a0.463,0.463,0,0,0,.331-0.14l4.221-4.265,0.013-.013a0.522,0.522,0,0,0,.095-0.144h0a0.541,0.541,0,0,0,.045-0.217v0a0.528,0.528,0,0,0-.044-0.211h0a0.525,0.525,0,0,0-.1-0.147,0.043,0.043,0,0,0-.011-0.012l-4.221-4.265a0.461,0.461,0,0,0-.68.019,0.539,0.539,0,0,0,.018.724l3.857,3.9-3.857,3.9a0.539,0.539,0,0,0-.018.724A0.467,0.467,0,0,0,617.472,457.538Z"
+                    transform="translate(-617 -448)"
+                  />
+                </svg>
+              </a>
+              <div class="comment__reply">
+                <div class="comment__img">
+                  <img src="images/team/2.jpg" alt="dad" />
                 </div>
-                <div class="comment__text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas fringilla massa et tristique convallis. Class aptent
-                    taciti sociosqu ad litora torquent per conubia nostra, per
-                    inceptos himenaeos. Suspendisse orci sem, ultrices
-                  </p>
+                <div class="comment__content">
+                  <div class="comment__top">
+                    <div class="comment__name">Delores G. Roberts</div>
+                    <time class="comment__date" datetime="2020-10-11"
+                      >Add 11 Oct 2020</time
+                    >
+                  </div>
+                  <div class="comment__text">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Maecenas fringilla massa et tristique convallis. Class
+                      aptent taciti sociosqu ad litora torquent per conubia
+                      nostra, per inceptos himenaeos. Suspendisse orci sem,
+                      ultrices
+                    </p>
+                  </div>
+                  <a class="comment__link" href="#">
+                    Reply
+                    <svg width="5.188" height="9.531" viewBox="0 0 5.188 9.531">
+                      <path
+                        fill="currentColor"
+                        d="M617.472,457.538a0.463,0.463,0,0,0,.331-0.14l4.221-4.265,0.013-.013a0.522,0.522,0,0,0,.095-0.144h0a0.541,0.541,0,0,0,.045-0.217v0a0.528,0.528,0,0,0-.044-0.211h0a0.525,0.525,0,0,0-.1-0.147,0.043,0.043,0,0,0-.011-0.012l-4.221-4.265a0.461,0.461,0,0,0-.68.019,0.539,0.539,0,0,0,.018.724l3.857,3.9-3.857,3.9a0.539,0.539,0,0,0-.018.724A0.467,0.467,0,0,0,617.472,457.538Z"
+                        transform="translate(-617 -448)"
+                      />
+                    </svg>
+                  </a>
                 </div>
-                <div class="comment__link">
-                  Reply
-              
-                  <svg width="5.188" height="9.531" viewBox="0 0 5.188 9.531">
-                    <path
-                      fill="currentColor"
-                      d="M617.472,457.538a0.463,0.463,0,0,0,.331-0.14l4.221-4.265,0.013-.013a0.522,0.522,0,0,0,.095-0.144h0a0.541,0.541,0,0,0,.045-0.217v0a0.528,0.528,0,0,0-.044-0.211h0a0.525,0.525,0,0,0-.1-0.147,0.043,0.043,0,0,0-.011-0.012l-4.221-4.265a0.461,0.461,0,0,0-.68.019,0.539,0.539,0,0,0,.018.724l3.857,3.9-3.857,3.9a0.539,0.539,0,0,0-.018.724A0.467,0.467,0,0,0,617.472,457.538Z"
-                      transform="translate(-617 -448)"
-                    />
-                  </svg>
-                </div>
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="comment__item">
-          <div class="comment__img">
-            <img src="images/team/3.jpg" alt="girls" />
-          </div>
-          <div class="comment__content">
-            <div class="comment__top">
-              <div class="comment__name">Delores G. Roberts</div>
-              <time class="comment__date">Add 11 Oct 2020</time>
+          </li>
+          <li class="comment__item">
+            <div class="comment__img">
+              <img src="images/team/1.jpg" alt="girls" />
             </div>
-            <div class="comment__text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas fringilla massa et tristique convallis. Class aptent
-                taciti sociosqu ad litora torquent per conubia nostra, per
-                inceptos himenaeos. Suspendisse orci sem, ultrices
-              </p>
+            <div class="comment__content">
+              <div class="comment__top">
+                <div class="comment__name">Delores G. Roberts</div>
+                <time class="comment__date" datetime="2020-10-11"
+                  >Add 11 Oct 2020</time
+                >
+              </div>
+              <div class="comment__text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Maecenas fringilla massa et tristique convallis. Class aptent
+                  taciti sociosqu ad litora torquent per conubia nostra, per
+                  inceptos himenaeos. Suspendisse orci sem, ultrices
+                </p>
+              </div>
+              <a class="comment__link" href="#">
+                Reply
+                <svg width="5.188" height="9.531" viewBox="0 0 5.188 9.531">
+                  <path
+                    fill="currentColor"
+                    d="M617.472,457.538a0.463,0.463,0,0,0,.331-0.14l4.221-4.265,0.013-.013a0.522,0.522,0,0,0,.095-0.144h0a0.541,0.541,0,0,0,.045-0.217v0a0.528,0.528,0,0,0-.044-0.211h0a0.525,0.525,0,0,0-.1-0.147,0.043,0.043,0,0,0-.011-0.012l-4.221-4.265a0.461,0.461,0,0,0-.68.019,0.539,0.539,0,0,0,.018.724l3.857,3.9-3.857,3.9a0.539,0.539,0,0,0-.018.724A0.467,0.467,0,0,0,617.472,457.538Z"
+                    transform="translate(-617 -448)"
+                  />
+                </svg>
+              </a>
             </div>
-            <div class="comment__link">
-              Reply
-          
-              <svg width="5.188" height="9.531" viewBox="0 0 5.188 9.531">
-                <path
-                  fill="currentColor"
-                  d="M617.472,457.538a0.463,0.463,0,0,0,.331-0.14l4.221-4.265,0.013-.013a0.522,0.522,0,0,0,.095-0.144h0a0.541,0.541,0,0,0,.045-0.217v0a0.528,0.528,0,0,0-.044-0.211h0a0.525,0.525,0,0,0-.1-0.147,0.043,0.043,0,0,0-.011-0.012l-4.221-4.265a0.461,0.461,0,0,0-.68.019,0.539,0.539,0,0,0,.018.724l3.857,3.9-3.857,3.9a0.539,0.539,0,0,0-.018.724A0.467,0.467,0,0,0,617.472,457.538Z"
-                  transform="translate(-617 -448)"
-                />
-              </svg>
-            </div>
-        </li>
-      </ul>
-      <h3 class="comment__title">Leave A Comment</h3>
-      <form class="comment__form" action="#">
-        <label class="comment__label">  
+          </li>
+        </ul>
+        <h3 class="comment__title">Leave A Comment</h3>
+        <form class="comment__form" action="#">
           <div class="comment__top">
-            <input class="comment__input" type="text" placeholder="Name">
-            <input class="comment__input"type="email" placeholder="Email">
+            <label class="comment__label">
+              <input class="comment__input" type="text" placeholder="Name" />
+            </label>
+            <label class="comment__label">
+              <input class="comment__input" type="email" placeholder="Email" />
+            </label>
           </div>
-          <textarea class="comment__textarea" placeholder="Comment"></textarea>
+          <label class="comment__label">
+            <textarea
+              class="comment__textarea"
+              placeholder="Comment"
+            ></textarea>
+          </label>
           <button class="comment__btn" type="submit">post comment</button>
-        </label>
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
   </section>
   @@include('./components/insights__bottom.html')
 </main>

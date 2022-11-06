@@ -124,14 +124,18 @@
     color: $mineShaft;
     @extend %rubik-400;
     margin-bottom: 15px;
+    display: flex;
+
+  }
+
+  &__tag {
+    padding-left: 15px;
+    color: $doveGray;
+    padding-left: 20px;
     transition: color 0.2s ease;
 
-    &:hover{
+    &:hover {
       color: $casper;
-    }
-    span {
-      color: $doveGray;
-      padding-left: 20px;
     }
   }
 
@@ -164,12 +168,16 @@
     position: relative;
   }
 
+  &__label{
+    width: 100%; 
+  }
+
   &__input {
     height: 100%;
     border: 1px solid $mystic;
     border-radius: 5px;
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 60px 10px 20px;
     &:focus {
       border-color: $casper;
     }
@@ -255,13 +263,12 @@
   &__inner {
     max-width: 830px;
   }
-  
+
   &__title {
     font-size: 24px;
     @extend %rubik-700;
     color: $blueBayoux;
     margin-bottom: 55px;
-   
   }
 
   &__item {
@@ -328,13 +335,18 @@
     border-top: 1px solid $gallery;
   }
 
-  &__input {
-    max-width: 400px;
+  &__label{
     width: 100%;
-    padding: 20px;
+    height: 100%; 
+  }
+
+  &__input,
+  &__textarea{
     @extend %rubik-400;
     border: 1px solid $gallery;
     color: $mineShaft;
+    padding: 20px;
+    width: 100%;
 
     &::placeholder {
       color: $gallery;
@@ -344,25 +356,16 @@
       border-color: $casper;
     }
   }
+  
+  &__input {
+    max-width: 400px;  
+  }
 
   &__textarea {
-    @extend %rubik-400;
-    border: 1px solid $gallery;
-    color: $mineShaft;
-    padding: 20px;
-    width: 100%;
     resize: none;
     height: 120px;
     margin-bottom: 40px;
     outline: none;
-
-    &::placeholder {
-      color: $gallery;
-    }
-
-    &:focus {
-      border-color: $casper;
-    }
   }
 
   &__btn {
