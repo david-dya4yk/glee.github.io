@@ -79,14 +79,17 @@
   &__item {
     max-width: 240px;
     @include line-clamp(2);
-    margin-bottom: 15px;
     @include _700{
       max-width: 100%;
+    }
+
+    &:not(:last-child){
+      margin-bottom: 15px;
     }
   }
 
   &__link:hover {
-    color: $black;
+    text-decoration: underline;
   }
 
   &__form {

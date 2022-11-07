@@ -10,7 +10,7 @@
     margin-bottom: 15px;
     @include line-clamp(1);
 
-    @include _432{
+    @include _432 {
       font-size: 30px;
       margin-bottom: 10px;
     }
@@ -29,7 +29,7 @@
     @include line-clamp(1);
 
     a:hover {
-      color: $lightApricol;
+      text-decoration: underline;
     }
   }
   &__item:not(:last-child) {
