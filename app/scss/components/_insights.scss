@@ -4,6 +4,10 @@
     justify-content: space-between;
     margin-bottom: 45px;
     align-items: center;
+    @include _432{
+      display: block;
+      margin-bottom: 30px;
+    }
   }
 
   &__link {
@@ -22,6 +26,16 @@
 
   &__title {
     margin: 0;
+
+    @include _432{
+      margin-bottom: 15px;
+      text-align-last: left;
+    }
+    
+    @include _500{
+      font-size: 24px;
+
+    }
   }
 
   &__inner {
@@ -30,14 +44,18 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
 
+
     @include _1200{
       grid-template-columns: repeat(2, 1fr);
       gap: 15px;
     }
 
     @include _700{
-      grid-template-columns: 1fr;
+      display: block;
+      max-width: 370px;
+      margin: 0 auto;
     }
+
   }
 
   &__bottom {
