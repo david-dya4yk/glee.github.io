@@ -16,19 +16,19 @@
     "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
-    "ion-rangeslider": "^2.3.1",
-    "rateyo": "^2.3.5"
-  },
-  "dependencies": {
-    "@fancyapps/fancybox": "^3.5.7",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.6.1",
-    "mixitup": "^3.3.1",
     "node-sass": "^7.0.1",
     "normalize.css": "^8.0.1",
     "sass": "^1.54.8",
-    "scss": "^0.2.4",
-    "slick-carousel": "^1.8.1"
+    "scss": "^0.2.4"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "jquery": "^3.6.1",
+    "mixitup": "^3.3.1",
+    "slick-carousel": "^1.8.1",
+    "ion-rangeslider": "^2.3.1",
+    "rateyo": "^2.3.5"
   }
 }
