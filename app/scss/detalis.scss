@@ -9,13 +9,17 @@
     margin-bottom: 80px;
 
     @include _1000 {
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: center;
+      margin-bottom: 30px;
     }
   }
 
   &__slider {
     display: flex;
+    @include _700{
+      margin-bottom: 30px;
+    }
   }
 
   &__items {
@@ -82,11 +86,11 @@
 
     @include _1000 {
       width: 70%;
-      margin-bottom: 40px;
     }
 
     @include _700 {
       width: 100%;
+      padding: 0;
     }
 
   }
@@ -96,6 +100,10 @@
     @extend %rubik-400;
     color: $mineShaft;
     @include line-clamp(1);
+
+    @include _500{
+      font-size: 30px;
+    }
   }
 
   &__star {
@@ -108,6 +116,11 @@
     @extend %rubik-400;
     margin-bottom: 30px;
     @include line-clamp(1);
+
+    @include _600{
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
@@ -211,6 +224,7 @@ input[type="number"] {
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__link {
@@ -241,7 +255,8 @@ input[type="number"] {
     &:not(:last-child) {
       margin-right: 15px;
       @include _700{
-        margin-right: 5px;
+        margin-right: 0;
+        margin-bottom: 10px;
       }
     }
   }
@@ -265,8 +280,9 @@ input[type="number"] {
   &__title {
     text-align: left;
     margin-bottom: 0;
-    @include _432{
+    @include _500{
       margin-bottom: 15px;
+      font-size: 24px;
     }
   }
 
