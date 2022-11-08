@@ -177,7 +177,6 @@
 
 .article {
   min-height: 420px;
-  max-width: 370px;
   width: 100%;
   border-radius: 6px;
 
@@ -207,9 +206,11 @@
     cursor: pointer;
     @include line-clamp(1);
     transform: translateY(-50%);
+    transition: color 0.2s, background-color 0.2s ease;
 
     &:hover {
-      color: $blueDianne;
+      color: $casper;
+      background-color: $white;
     }
   }
 
@@ -224,7 +225,7 @@
       max-width: 100%;
     }
     &:hover {
-      color: $blueBayoux;
+      text-decoration: underline;
     }
   }
 
@@ -237,6 +238,10 @@
 
     time {
       margin-right: 40px;
+    }
+
+    & a:hover {
+      text-decoration: underline;
     }
   }
 
