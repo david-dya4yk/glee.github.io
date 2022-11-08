@@ -56,7 +56,7 @@
     align-items: center;
     color: $casper;
     margin-bottom: 60px;
-    transition: background-color 0.2s, color 0.2s  ease;
+    transition: background-color 0.2s ease, color 0.2s  ease;
   }
 
   &__name {
@@ -81,9 +81,12 @@
       text-decoration: underline;
     }
 
-    &--address {
-      max-width: 200px;
-    }
+   &:nth-child(1){
+    max-width: 200px;
+   } 
+    // &--address {
+    //   max-width: 200px;
+    // }
   }
 
   &__input,
