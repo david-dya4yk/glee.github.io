@@ -4,6 +4,10 @@
     justify-content: space-between;
     margin-bottom: 45px;
     align-items: center;
+    @include _432{
+      display: block;
+      margin-bottom: 30px;
+    }
   }
 
   &__link {
@@ -22,6 +26,11 @@
 
   &__title {
     margin: 0;
+
+    @include _432{
+      margin-bottom: 15px;
+      text-align-last: left;
+    }
   }
 
   &__inner {

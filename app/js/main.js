@@ -1,14 +1,26 @@
 $(function () {
-
-$('.related__inner').slick({
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  arrows: true,
-  appendArrows: $('.related__arrows'),
-  prevArrow: '<button type="button" class="related__prev">Previous</button>',
-  nextArrow: '<button type="button" class="related__next">Next</button>',
-});
-
+  $(".related__inner").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    appendArrows: $(".related__arrows"),
+    prevArrow: '<button type="button" class="related__prev">Previous</button>',
+    nextArrow: '<button type="button" class="related__next">Next</button>',
+    responsive: [
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 432,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
 
   $(".tabs__link").on("click", function (e) {
     e.preventDefault();
@@ -18,7 +30,6 @@ $('.related__inner').slick({
     $(".tabs__item").removeClass("tabs__item--active");
     $($(this).attr("href")).addClass("tabs__item--active");
   });
-
 
   (function quantityProducts() {
     var $quantityArrowMinus = $(".quantity-arrow-minus");
@@ -39,29 +50,32 @@ $('.related__inner').slick({
     }
   })();
 
-
-
-
-
-  $('.detalis__box').slick({
+  $(".detalis__box").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: '.detalis__items'
+    asNavFor: ".detalis__items",
   });
-  $('.detalis__items').slick({
+  $(".detalis__items").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    asNavFor: '.detalis__box',
+    asNavFor: ".detalis__box",
     dots: false,
     focusOnSelect: true,
     arrows: false,
     vertical: true,
     autoplay: true,
     autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 2,
+        },
+      }
+    ],
   });
-
 
   $(".shop__btn").on("click", function () {
     $(".shop__btn").removeClass("shop__btn--active");
@@ -72,7 +86,6 @@ $('.related__inner').slick({
     $(".shop__item").addClass("shop__item--list");
     $(".product").addClass("product--list");
   });
-
 
   $(".button__grid").on("click", function () {
     $(".shop__item").removeClass("shop__item--list");
@@ -107,8 +120,8 @@ $('.related__inner').slick({
       scope: "local",
     },
   };
-  const mixitup1 = document.querySelector('.mixitup-1')
-  const mixitup2 = document.querySelector('.mixitup-2')
-  if (mixitup1) mixitup('.mixitup-1', controls)
-  if (mixitup2) mixitup('.mixitup-2', controls)
+  const mixitup1 = document.querySelector(".mixitup-1");
+  const mixitup2 = document.querySelector(".mixitup-2");
+  if (mixitup1) mixitup(".mixitup-1", controls);
+  if (mixitup2) mixitup(".mixitup-2", controls);
 });

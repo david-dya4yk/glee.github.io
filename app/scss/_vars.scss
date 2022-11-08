@@ -82,6 +82,12 @@ $gallery: #ebebeb;
   }
 }
 
+@mixin _500 {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
 @mixin _600 {
   @media (max-width: 600px) {
     @content;

@@ -1,8 +1,17 @@
 .detalis {
   padding: 120px 0;
+
+  @include _700{
+    padding: 60px 0;
+  }
   &__wrapper {
     display: flex;
     margin-bottom: 80px;
+
+    @include _1000 {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
 
   &__slider {
@@ -14,6 +23,10 @@
     width: 138px;
     height: 530px;
     overflow: hidden;
+
+    @include _500{
+      display: none;
+    }
   }
 
   &__inner {
@@ -28,8 +41,6 @@
     }
   }
 
-
-
   &__one {
     height: 410px;
     width: 250px;
@@ -37,6 +48,10 @@
       width: 100%;
       object-fit: contain;
       height: 100%;
+    }
+    
+    @include _500{
+      height: 250px;
     }
   }
 
@@ -46,10 +61,34 @@
     padding: 60px 70px;
     height: 530px;
     margin-right: 30px;
+
+    @include _600{
+      width: 255px;
+      padding: 60px 1px;
+      margin: 0;
+
+    }
+
+       
+    @include _500{
+      padding: 25px 1px;
+      height: 307px;
+
+  }
   }
 
   &__content {
     padding: 30px 10px 30px 0;
+
+    @include _1000 {
+      width: 70%;
+      margin-bottom: 40px;
+    }
+
+    @include _700 {
+      width: 100%;
+    }
+
   }
 
   &__title {
@@ -75,6 +114,10 @@
     max-width: 530px;
     margin-bottom: 25px;
     line-height: 1.8;
+
+    @include _1000 {
+      max-width: 100%;
+    }
   }
 
   &__btn {
@@ -98,12 +141,23 @@
     @extend %rubik-400;
     line-height: 1.8;
     span {
-    @include line-clamp(1);
+      @include line-clamp(1);
 
       display: block;
     }
+
+    @include _1000 {
+      display: flex;
+      max-width: 500px;
+      justify-content: space-between;
+    }
+
+    @include _700{
+      max-width: 100%;
+    }
   }
 }
+
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -162,7 +216,6 @@ input[type="number"] {
   &__link {
     max-width: 240px;
     width: 100%;
-    display: inline-block;
     text-align: center;
     font-size: 18px;
     @extend %rubik-500;
@@ -170,9 +223,14 @@ input[type="number"] {
     background-color: $mystic;
     border-radius: 6px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    @include line-clamp(1);
-    
-
+    @include line-clamp(2);
+    @include _700{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      padding: 15px 5px;
+    }
 
     &--active,
     &:hover {
@@ -182,6 +240,9 @@ input[type="number"] {
 
     &:not(:last-child) {
       margin-right: 15px;
+      @include _700{
+        margin-right: 5px;
+      }
     }
   }
 
@@ -197,9 +258,16 @@ input[type="number"] {
 .related {
   padding-bottom: 110px;
 
+  @include _700{
+    padding-bottom: 60px;
+  }
+
   &__title {
     text-align: left;
     margin-bottom: 0;
+    @include _432{
+      margin-bottom: 15px;
+    }
   }
 
   &__item:not(:last-child) {
@@ -211,6 +279,10 @@ input[type="number"] {
     justify-content: space-between;
     margin-bottom: 65px;
 
+    @include _432{
+      display: block;
+      margin-bottom: 20px;
+    }
   }
 
   &__prev::before {
