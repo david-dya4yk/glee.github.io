@@ -472,6 +472,10 @@
     &:hover img {
       transform: scale(1.1);
     }
+
+    @include _500{
+      margin-bottom: 20px;
+    }
   }
 
   &__box{
@@ -488,6 +492,13 @@
     color: $white;
     font-size: 12px;
     @extend %rubik-400;
+
+    @include _500{
+      padding: 15px;
+      transform: translateY(-64px);
+      border-bottom-left-radius: 15px;
+      max-width: 215px;
+    }
   }
 
   &__title{
@@ -496,9 +507,13 @@
     @extend %rubik-400;
     color: $mineShaft;
     transition: text-decoration 0.2s ease;
-    @include line-clamp(1);
+    @include line-clamp(2);
     &:hover{
       text-decoration: underline;
+    }
+
+    @include _600{
+      font-size: 26px;
     }
   }
 
@@ -506,6 +521,9 @@
     line-height: 1.5;
     margin-bottom: 30px;
     @include line-clamp(10);
+    @include _600{
+      margin-bottom: 15px;
+    }
   }
 
   &__link{
@@ -525,6 +543,11 @@
       background-color: $casper;
       color: $white;
       fill: $white;
+    }
+
+    @include _500{
+      max-width: 165px;
+      padding: 12px;
     }
   }
 }

@@ -34,12 +34,12 @@ $doveGray: #666666;
 $gallery: #ebebeb;
 
 %dmsans-400 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 400;
 }
 
 %dmsans-500 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 500;
 }
 
@@ -130,3 +130,10 @@ $gallery: #ebebeb;
   }
 }
 
+@mixin _hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
