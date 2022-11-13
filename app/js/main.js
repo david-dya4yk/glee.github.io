@@ -1,4 +1,12 @@
 $(function () {
+
+
+  $(".filter__btn").on("click", function () {
+    $("aside").toggleClass("aside--menu");
+    $("body").toggleClass("body--overflow");
+  });``
+
+
   $(".related__inner").slick({
     slidesToShow: 4,
     slidesToScroll: 1,
