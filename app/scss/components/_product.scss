@@ -22,6 +22,11 @@
     justify-content: unset;
     text-align: left;
     transition: box-shadow 0.2s ease;
+
+    @include _600{
+      flex-direction: column;
+      justify-content: center;
+    }
     &:hover {
       box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
     }
@@ -34,7 +39,25 @@
       padding: 0 20px;
       img {
         max-height: 350px;
+
+        @include _600{
+          max-height: 250px;
+        }
       }
+
+      @include _700{
+        height: 350px;
+        max-width: 200px;
+        margin-right: 20px;
+
+      }
+
+      @include _600{
+        max-width: 300px;
+        margin-right: 0;
+        height: 280px;
+      }
+
     }
 
     .product__content {
@@ -48,12 +71,20 @@
     .product__name {
       font-size: 40px;
       text-align: left;
+
+      @include _600{
+        font-size: 30px;
+      }
     }
 
     .product__subtitle {
       color: $mineShaft;
       font-size: 30px;
       margin-bottom: 35px;
+      @include _600{
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
     }
 
     .product__box {
@@ -63,11 +94,19 @@
     .product__text {
       display: unset;
       @include line-clamp(3);
+      @include _600{
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
     }
 
     .product__link {
       display: block;
       @include line-clamp(1);
+
+      @include _600{
+        margin: 0;
+      }
     }
   }
 
